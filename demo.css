@@ -1,0 +1,68 @@
+*{
+	margin:0;
+	padding:0;
+}
+.game{    /*游戏区域布局*/
+	position:relative;
+	width:750px;
+	height:600px;
+	margin:100px auto;
+}
+.ground{  /* 游戏背景*/
+	position:relative;
+	width:750px;
+	height:550px;
+	background:url('images/bg_canvas.png');
+	cursor:url('images/hammer.png'),auto;  /*鼠标划入变锤子*/
+}
+.score{  /*总分定位*/
+	position: absolute;
+	width:300px;
+	height:30px;
+	left:420px;
+	top:180px;
+}
+.live{   /*生命定位*/
+	position:absolute;
+	top:180px;
+	right:100px;
+}
+.score span,.live span{    /*总分和生命的样式*/
+	color:#fff;
+	line-height:30px;
+	font-size:24px;
+	vertical-align:top;
+	margin-left:10px;
+}
+.mask{           /*洞穴位置大小*/
+	position:absolute;
+	width:140px;
+	height:125px;
+	/*border:1px solid #000;*/
+	overflow:hidden;
+}
+.mouse{    /* 老鼠*/
+	position:absolute;
+	width:110px;
+	height:110px;
+	overflow:hidden;
+	left:0;
+	top:20px;
+	background-position:50% 50%;
+	background-repeat: no-repeat;
+	transition:top 0.5s; /*transition:<过渡属性名称> <过渡时间> <过渡模式>*/
+	overflow:hidden;
+}
+@keyframes moveTop{    /*css3设置动画*/
+	0%{
+		top:70px;
+	}
+	100%{
+		top:20px;
+	}
+}
+/*@keyframes mymove
+{
+from {top:70px;}
+to {top:20px;}
+}*/
